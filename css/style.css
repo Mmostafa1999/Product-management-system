@@ -1,0 +1,127 @@
+.cruds nav {
+  height: 25%;
+  text-align: center;
+  display: inherit;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 1px 2px 6px white;
+}
+.cruds i {
+  cursor: pointer;
+}
+
+.cruds input {
+  transition: all 0.5s;
+}
+.cruds input:focus {
+  scale: 1.1;
+  transition: all 0.5s;
+}
+
+.cruds button {
+  font-size: 19px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.cruds button:hover {
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.highlight {
+  animation: highlight 1s ease-out;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #f53434;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+/* light mode */
+.toggle-btn i {
+  font-size: 27px;
+  color: rgb(221, 221, 46);
+  cursor: pointer;
+}
+
+.light-mode input,
+.light-mode textarea {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+}
+
+.toggle-btn i {
+  transition: color 0.3s;
+}
