@@ -2,12 +2,10 @@
 
 ## Table of contents
 - [Overview](#overview)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [Technologies Used](#Technologies-Used)
+- [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
@@ -17,27 +15,23 @@
 4. **Dark/Light Mode Toggle**: Switch between dark and light themes to suit your preference.
    
 ## Screenshot
--[Dark Mode](./screenshots/dark.png)
--[Light Mode](./screenshots/light.png)
+[Dark Mode](./screenshots/dark.png)
+[Light Mode](./screenshots/light.png)
 
 ## Links
-- [Live Demo](link_to_live_demo)
-- [Documentation](link_to_documentation)
+- [Live Demo](https://mmostafa1999.github.io/Product-management-system/)
+- [Documentation](https://github.com/Mmostafa1999/Product-management-system)
 
-## My process
-### Built with
-- Technology 1
-- Technology 2
-- Technology 3
+## Technologies Used
+- Semantic HTML5 markup
+- CSS custom properties
+- Bootstrap
+- JS [ES6]
 
-### What I learned
-- Lesson 1
-- Lesson 2
-
-### Useful resources
-- [Resource 1](link_to_resource_1)
-- [Resource 2](link_to_resource_2)
+## What I learned
+I learn how to make a website with HTML & CSS and Bootstap ,style the elements , how to position the elements and how to make the website responsive, make the website dynamic wih javascript
 
 ## Author
-- **Name**: Your Name
-- **Contact**: Your Contact Information
+- **Name**: Mahmoud Mostafa Dardier
+- **Contact**: [Gmail](mahmoud.mostafa4467@gmail.com)
+
