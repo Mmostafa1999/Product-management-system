@@ -15,7 +15,10 @@
 4. **Dark/Light Mode Toggle**: Switch between dark and light themes to suit your preference.
    
 ## Screenshot
+
+### Dark Mode:
 ![Dark Mode](screenshots/dark.png)
+### Light Mode:
 ![Light Mode](screenshots/light.png)
 
 ## Links
