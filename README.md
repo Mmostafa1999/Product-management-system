@@ -16,10 +16,11 @@
 3. **Responsive Design**: Fully optimized for all devices, ensuring a seamless experience whether you're on a phone, tablet, or desktop.
 4. **Dark/Light Mode Toggle**: Switch between dark and light themes to suit your preference.
    
-### Screenshot
-![Dark Mode](./screenshots/dark.png)
+## Screenshot
+-[Dark Mode](./screenshots/dark.png)
+-[Light Mode](./screenshots/light.png)
 
-### Links
+## Links
 - [Live Demo](link_to_live_demo)
 - [Documentation](link_to_documentation)
 
