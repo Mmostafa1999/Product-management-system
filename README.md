@@ -15,12 +15,12 @@
 4. **Dark/Light Mode Toggle**: Switch between dark and light themes to suit your preference.
    
 ## Screenshot
-[Dark Mode](./screenshots/dark.png)
-[Light Mode](./screenshots/light.png)
+![Dark Mode](screenshots/dark.png)
+![Light Mode](screenshots/light.png)
 
 ## Links
-- [Live Demo](https://mmostafa1999.github.io/Product-management-system/)
-- [Documentation](https://github.com/Mmostafa1999/Product-management-system)
+- [Live Demo](https://mmostafa1999.github.io/Product-management-system/) 🌟
+- [Documentation](https://github.com/Mmostafa1999/Product-management-system) 🌟
 
 ## Technologies Used
 - Semantic HTML5 markup
