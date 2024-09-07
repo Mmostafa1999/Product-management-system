@@ -77,6 +77,7 @@ const clearInputs = () => {
   inputName.value = "";
   inputPrice.value = "";
   inputCat.value = "";
+  inputCount.value = "";
   inputDesc.value = "";
 };
 
@@ -91,7 +92,7 @@ const deleteAllBtn = () => {
 };
 
 // handle disply products inn table
-const displyData = (arrProduct) => {
+const displyData = arrProduct => {
   var rowTableData = ``;
   for (let i = 0; i < arrProduct.length; i++) {
     rowTableData += `
@@ -136,7 +137,7 @@ if (localStorage.getItem("product") != null) {
 }
 
 // handle delete btn
-const deleteData = (index) => {
+const deleteData = index => {
   arrProduct.splice(index, 1);
   localStorage.setItem("product", JSON.stringify(arrProduct));
   displyData(arrProduct);
@@ -144,7 +145,7 @@ const deleteData = (index) => {
 };
 
 // handle edit btn
-const editBtn = (index) => {
+const editBtn = index => {
   currentIndex = index;
   inputName.value = arrProduct[index].name;
   inputPrice.value = arrProduct[index].price;
@@ -156,7 +157,7 @@ const editBtn = (index) => {
 };
 
 // handle search input
-const searchInput = (word) => {
+const searchInput = word => {
   var newArray = [];
 
   for (let i = 0; i < arrProduct.length; i++) {
@@ -268,10 +269,37 @@ const toggleMode = () => {
     toggleIcon.style.color = "black";
     body.style.background = "#f2f2f2";
     body.style.color = "black";
+    localStorage.setItem("theme", "light");
   } else {
+    toggleIcon.classList.replace("fa-moon", "fa-sun");
+    toggleIcon.style.color = "rgb(221, 221, 46)";
+    body.style.background = "rgb(34, 34, 34)";
+    body.style.color = "white";
+    localStorage.setItem("theme", "dark");
+  }
+};
+
+// saved theme in local storage
+const applySavedTheme = () => {
+  const savedTheme = localStorage.getItem("theme");
+  const body = document.body;
+  const toggleIcon = document.getElementById("toggleDark");
+
+  if (savedTheme === "light") {
+    body.classList.add("light-mode");
+    toggleIcon.classList.replace("fa-sun", "fa-moon");
+    toggleIcon.style.color = "black";
+    body.style.background = "#f2f2f2";
+    body.style.color = "black";
+  } else {
+    // Default to dark mode if no theme is saved
+    body.classList.remove("light-mode");
     toggleIcon.classList.replace("fa-moon", "fa-sun");
     toggleIcon.style.color = "rgb(221, 221, 46)";
     body.style.background = "rgb(34, 34, 34)";
     body.style.color = "white";
   }
 };
+
+// Call this function on page load
+applySavedTheme();

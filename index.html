@@ -1,32 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
-    />
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <title>CRUDS</title>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.body.classList.add("light-mode");
+          document.documentElement.style.background = "#f2f2f2";
+          document.documentElement.style.color = "black";
+        } else {
+          document.body.classList.remove("light-mode");
+          document.documentElement.style.background = "rgb(34, 34, 34)";
+          document.documentElement.style.color = "white";
+        }
+      })();
+    </script>
   </head>
+  <style>
+    @media screen and (max-width: 426px) {
+      .cruds nav {
+        width: 147%;
+      }
+      .form {
+        width: 145%;
+      }
+    }
+  </style>
+  <div class="container cruds">
+    <nav class="w-150"></nav>
+    <form class="form w-150"></form>
+  </div>
   <body
     class="light-mode"
     style="
       background: rgb(34, 34, 34);
       font-family: Nunito, sans-serif;
       color: white;
-      transition: all 2s;
-    "
-  >
+      transition:
+        background-color 0.3s,
+        color 0.3s;
+    ">
     <div class="container cruds">
       <!-- start Nav bar section -->
       <nav class="navbar mt-5 rounded">
@@ -49,8 +76,7 @@
             class="form-control is-invalid"
             placeholder="Oppo f6"
             required
-            oninput="testName()"
-          />
+            oninput="testName()" />
         </div>
 
         <div class="mb-3">
@@ -61,8 +87,7 @@
             class="form-control"
             placeholder="250$"
             required
-            oninput="testPrice()"
-          />
+            oninput="testPrice()" />
         </div>
 
         <div class="mb-3">
@@ -72,8 +97,7 @@
             id="count"
             class="form-control"
             required
-            oninput="testCount()"
-          />
+            oninput="testCount()" />
         </div>
 
         <div class="mb-3">
@@ -84,8 +108,7 @@
             class="form-control"
             placeholder="Phone"
             required
-            oninput="testCategory()"
-          />
+            oninput="testCategory()" />
         </div>
 
         <div class="mb-3">
@@ -95,16 +118,14 @@
             id="desc"
             class="form-control"
             placeholder="Used"
-            oninput="testDesc()"
-          />
+            oninput="testDesc()" />
         </div>
 
         <button
           onclick="getData();"
           type="submit"
           id="add-btn"
-          class="btn btn-info mt-2"
-        >
+          class="btn btn-info mt-2">
           Add Product
         </button>
 
@@ -115,16 +136,14 @@
             type="text"
             id="search"
             class="form-control"
-            placeholder="Search.."
-          />
+            placeholder="Search.." />
         </div>
 
         <button
           onclick="deleteAllProducts()"
           id="delete-all"
           type="submit"
-          class="btn btn-danger mt-4 mx-auto w-75"
-        >
+          class="btn btn-danger mt-4 mx-auto w-75">
           Delete All Products
         </button>
         <div id="snackbar">Invalid Input, Please Enter Product Data Again</div>
@@ -135,8 +154,7 @@
       <!-- start display data sec -->
       <table
         class="table table-dark table-hover mt-5"
-        style="margin-bottom: 55px"
-      >
+        style="margin-bottom: 55px">
         <thead>
           <tr>
             <th>index</th>
